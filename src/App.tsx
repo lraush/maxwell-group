@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import {
   LineChart,
   Line,
@@ -20,7 +20,7 @@ const data = [
 ];
 
 class App extends Component {
-  calculateStatistics = (values) => {
+  calculateStatistics = (values: any[]) => {
     const total = values.reduce((acc: number, value: number) => acc + value, 0);
     const average = total / values.length;
     const variance =
